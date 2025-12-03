@@ -507,7 +507,7 @@ class AplikasiKantin(ctk.CTk):
         refresh()
 
         # ==============================
-        # TOMBOL HAPUS RIWAYAT TERPILIH
+        # TOMBOL HAPUS RIWAYAT
         # ==============================
         def hapus_riwayat():
             from tkinter import messagebox
