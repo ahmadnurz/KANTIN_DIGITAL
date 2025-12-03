@@ -135,13 +135,8 @@ class LoginWindow(ctk.CTk):
 
     def masuk_tamu(self):
         self.destroy()
-<<<<<<< HEAD
-        AplikasiKantin(is_admin=False).mainloop()
-#VARIABEL CLASS(MENYIMOAN DATA APLIKASI)
-=======
         buka_aplikasi_utama(is_admin=False)
 
->>>>>>> 3644b64a56daf6570839729fcabd5d9b4518614f
 # --------------- Main App ---------------
 class AplikasiKantin(ctk.CTk):
     def __init__(self, is_admin=True):
@@ -149,16 +144,6 @@ class AplikasiKantin(ctk.CTk):
         self.is_admin = is_admin
         role = "Administrator" if is_admin else "Mode Tamu"
         self.title(f"Dashboard {role} - Kantin Digital")
-<<<<<<< HEAD
-        self.geometry("1200x750")
-        self.configure(fg_color=COLOR_BG_MAIN)
-#ARRAY
-        self.manager = KantinManager()
-        self.cart = Cart()
-
-        self.title("Kantin Digital")
-=======
->>>>>>> 3644b64a56daf6570839729fcabd5d9b4518614f
         self.geometry("1200x750")
 
         self.manager = KantinManager()
@@ -215,11 +200,6 @@ class AplikasiKantin(ctk.CTk):
         self.frame_riwayat = None
         self.frame_laporan = None
 
-<<<<<<< HEAD
-        # show default page
-        self.show_pemesanan()
-#PERCABANGAN
-=======
         # default page: show all menu
         self.show_pemesanan("Semua")
 
@@ -271,7 +251,6 @@ class AplikasiKantin(ctk.CTk):
         elif current == "laporan":
             self.show_laporan()
 
->>>>>>> 3644b64a56daf6570839729fcabd5d9b4518614f
     def toggle_theme(self):
         # toggle appearance mode in customtkinter and re-apply palette
         if self.dark_var.get():
@@ -334,27 +313,10 @@ class AplikasiKantin(ctk.CTk):
             total_label.configure(text=f"Total: Rp {total:,}".replace(",", "."))
             self.current_cart_total = total
 
-<<<<<<< HEAD
-        # menu list (scrollable)
-        canvas = tk.Canvas(frame, bg=pal["card"], highlightthickness=0)
-        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=canvas.yview)
-        container = ttk.Frame(canvas)
-        container.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
-        canvas.create_window((0,0), window=container, anchor="nw")
-        canvas.configure(yscrollcommand=scrollbar.set)
-        canvas.pack(side="left", fill="both", expand=True, pady=10)
-        scrollbar.pack(side="left", fill="y")
-#PERULANGAN(MENAMPILKAN MENU ATAU MENGISI KERANJANG)
-#FUNGSI(DEF)
-        # populate cards function
-        def populate_cards(filter_kat="Semua", keyword=""):
-            for w in scrollable_frame.winfo_children():
-=======
         # populate cards with optional filter & search
         def populate(kategori="Semua", keyword=""):
             # clear
             for w in scroll_frame.winfo_children():
->>>>>>> 3644b64a56daf6570839729fcabd5d9b4518614f
                 w.destroy()
 
             menus = self.manager.get_menu_by_kategori(kategori) if kategori and kategori != "Semua" else self.manager.get_semua_menu()
