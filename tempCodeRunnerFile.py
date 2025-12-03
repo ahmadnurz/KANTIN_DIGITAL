@@ -176,11 +176,11 @@ class AplikasiKantin(ctk.CTk):
             self.btn_laporan.pack(pady=6)
         else:
             # for guest / tamu: show category quick buttons
-            self.btn_makanan = ctk.CTkButton(self.sidebar, text="🍽️ Makanan", command=lambda: self.show_pemesanan("Makanan"), width=200, fg_color="transparent", anchor="w")
+            self.btn_makanan = ctk.CTkButton(self.sidebar, text="Makanan", command=lambda: self.show_pemesanan("Makanan"), width=200, fg_color="transparent", anchor="w")
             self.btn_makanan.pack(pady=6)
-            self.btn_minuman = ctk.CTkButton(self.sidebar, text="🥤 Minuman", command=lambda: self.show_pemesanan("Minuman"), width=200, fg_color="transparent", anchor="w")
+            self.btn_minuman = ctk.CTkButton(self.sidebar, text="Minuman", command=lambda: self.show_pemesanan("Minuman"), width=200, fg_color="transparent", anchor="w")
             self.btn_minuman.pack(pady=6)
-            self.btn_snack = ctk.CTkButton(self.sidebar, text="🍟 Snack", command=lambda: self.show_pemesanan("Snack"), width=200, fg_color="transparent", anchor="w")
+            self.btn_snack = ctk.CTkButton(self.sidebar, text="Snack", command=lambda: self.show_pemesanan("Snack"), width=200, fg_color="transparent", anchor="w")
             self.btn_snack.pack(pady=6)
 
         # theme switch

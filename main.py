@@ -163,24 +163,24 @@ class AplikasiKantin(ctk.CTk):
         ctk.CTkLabel(self.sidebar, text="KANTIN", font=("Montserrat", 22, "bold"), text_color=self.COLORS["PRIMARY"]).pack(pady=(30,10))
 
         # always show Pemesanan for all users
-        self.btn_order = ctk.CTkButton(self.sidebar, text="🛒 Pemesanan", command=lambda: self.show_pemesanan("Semua"), width=200, fg_color="transparent", anchor="w")
+        self.btn_order = ctk.CTkButton(self.sidebar, text=" Pemesanan", command=lambda: self.show_pemesanan("Semua"), width=200, fg_color="transparent", anchor="w")
         self.btn_order.pack(pady=6)
 
         # If admin show admin pages, guest will see category buttons below
         if self.is_admin:
-            self.btn_kelola = ctk.CTkButton(self.sidebar, text="📝 Kelola Menu", command=self.show_kelola, width=200, fg_color="transparent", anchor="w")
+            self.btn_kelola = ctk.CTkButton(self.sidebar, text="Kelola Menu", command=self.show_kelola, width=200, fg_color="transparent", anchor="w")
             self.btn_kelola.pack(pady=6)
-            self.btn_riwayat = ctk.CTkButton(self.sidebar, text="📜 Riwayat", command=self.show_riwayat, width=200, fg_color="transparent", anchor="w")
+            self.btn_riwayat = ctk.CTkButton(self.sidebar, text="Riwayat", command=self.show_riwayat, width=200, fg_color="transparent", anchor="w")
             self.btn_riwayat.pack(pady=6)
-            self.btn_laporan = ctk.CTkButton(self.sidebar, text="📊 Laporan", command=self.show_laporan, width=200, fg_color="transparent", anchor="w")
+            self.btn_laporan = ctk.CTkButton(self.sidebar, text="Laporan", command=self.show_laporan, width=200, fg_color="transparent", anchor="w")
             self.btn_laporan.pack(pady=6)
         else:
             # for guest / tamu: show category quick buttons
-            self.btn_makanan = ctk.CTkButton(self.sidebar, text="🍽️ Makanan", command=lambda: self.show_pemesanan("Makanan"), width=200, fg_color="transparent", anchor="w")
+            self.btn_makanan = ctk.CTkButton(self.sidebar, text="  Makanan", command=lambda: self.show_pemesanan("Makanan"), width=200, fg_color="transparent", anchor="w")
             self.btn_makanan.pack(pady=6)
-            self.btn_minuman = ctk.CTkButton(self.sidebar, text="🥤 Minuman", command=lambda: self.show_pemesanan("Minuman"), width=200, fg_color="transparent", anchor="w")
+            self.btn_minuman = ctk.CTkButton(self.sidebar, text="  Minuman", command=lambda: self.show_pemesanan("Minuman"), width=200, fg_color="transparent", anchor="w")
             self.btn_minuman.pack(pady=6)
-            self.btn_snack = ctk.CTkButton(self.sidebar, text="🍟 Snack", command=lambda: self.show_pemesanan("Snack"), width=200, fg_color="transparent", anchor="w")
+            self.btn_snack = ctk.CTkButton(self.sidebar, text="  Snack", command=lambda: self.show_pemesanan("Snack"), width=200, fg_color="transparent", anchor="w")
             self.btn_snack.pack(pady=6)
 
         # theme switch
@@ -426,7 +426,7 @@ class AplikasiKantin(ctk.CTk):
             messagebox.showwarning("Kosong", "Keranjang kosong.")
             return
         # ask for buyer name (optional). No meja input: backend akan generate meja
-        buyer = simpledialog.askstring("Nama Pembeli", "Masukkan nama pembeli (boleh kosong):")
+        buyer = simpledialog.askstring("Nama Pembeli", "Masukkan nama pembeli: ")
         # build OrderItems
         items = []
         for entry in self.keranjang:
