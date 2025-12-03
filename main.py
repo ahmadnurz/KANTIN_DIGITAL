@@ -9,20 +9,6 @@ from datetime import datetime
 
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("dark-blue")
-<<<<<<< HEAD
-# KONSTANTA
-# Colors
-COLOR_BG_MAIN = "#0F172A"
-COLOR_SIDEBAR = "#1E293B"
-COLOR_CARD = "#334155"
-COLOR_PRIMARY = "#3B82F6"
-COLOR_SUCCESS = "#10B981"
-COLOR_WARNING = "#F59E0B"
-COLOR_DANGER = "#EF4444"
-#VARIABEL LOGIN(MENYIMPANDATA LOGINN)
-# --------------- Login Window ---------------
-#OPP(LOGIN WINDOW)
-=======
 
 # --------------------------
 # THEMES
@@ -85,7 +71,6 @@ class Cart:
 # --------------------------
 # Login window
 # --------------------------
->>>>>>> da40006a8cbb55a28ef1d7419f869cbe4d5bc6a8
 class LoginWindow(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -142,18 +127,9 @@ class LoginWindow(ctk.CTk):
 
     def masuk_tamu(self):
         self.destroy()
-<<<<<<< HEAD
-        buka_aplikasi_utama(is_admin=False)
+        AplikasiKantin(is_admin=False).mainloop()
 #VARIABEL CLASS(MENYIMOAN DATA APLIKASI)
 # --------------- Main App ---------------
-=======
-        AplikasiKantin(is_admin=False).mainloop()
-
-
-# --------------------------
-# Main application
-# --------------------------
->>>>>>> da40006a8cbb55a28ef1d7419f869cbe4d5bc6a8
 class AplikasiKantin(ctk.CTk):
     def __init__(self, is_admin=True):
         super().__init__()
@@ -162,14 +138,11 @@ class AplikasiKantin(ctk.CTk):
         ctk.set_appearance_mode("Dark")
 
         self.is_admin = is_admin
-<<<<<<< HEAD
         role = "Administrator" if is_admin else "Mode Tamu"
         self.title(f"Dashboard {role} - Kantin Digital")
         self.geometry("1200x750")
         self.configure(fg_color=COLOR_BG_MAIN)
 #ARRAY
-=======
->>>>>>> da40006a8cbb55a28ef1d7419f869cbe4d5bc6a8
         self.manager = KantinManager()
         self.cart = Cart()
 
@@ -219,14 +192,7 @@ class AplikasiKantin(ctk.CTk):
 
         # show default page
         self.show_pemesanan()
-<<<<<<< HEAD
 #PERCABANGAN
-=======
-
-    # --------------------------
-    # theme
-    # --------------------------
->>>>>>> da40006a8cbb55a28ef1d7419f869cbe4d5bc6a8
     def toggle_theme(self):
         self.theme = "dark" if self.dark_var.get() else "light"
         pal = THEMES[self.theme]
@@ -284,17 +250,11 @@ class AplikasiKantin(ctk.CTk):
         canvas.configure(yscrollcommand=scrollbar.set)
         canvas.pack(side="left", fill="both", expand=True, pady=10)
         scrollbar.pack(side="left", fill="y")
-<<<<<<< HEAD
 #PERULANGAN(MENAMPILKAN MENU ATAU MENGISI KERANJANG)
 #FUNGSI(DEF)
         # populate cards function
         def populate_cards(filter_kat="Semua", keyword=""):
             for w in scrollable_frame.winfo_children():
-=======
-
-        def render_menu(kat="Semua", key=""):
-            for w in container.winfo_children():
->>>>>>> da40006a8cbb55a28ef1d7419f869cbe4d5bc6a8
                 w.destroy()
             menus = self.manager.get_semua_menu()
             if kat != "Semua":
