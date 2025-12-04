@@ -1,16 +1,11 @@
 Nama,Harga,Kategori,Stok
-Nasi goreng,16000,Makanan,16
-Gado-Gado,13000,Makanan,15
-Lalapan,24000,Makanan,23
-jus mangga,6000,Minuman,19
-jus obok-obok,6000,Minuman,23
-Pilus,1000,Snack,20
-Nasi goreng,16000,Makanan,19
-Gado-Gado,13000,Makanan,17
-Lalapan,24000,Makanan,25
-jus mangga,6000,Minuman,18
-jus obok-obok,6000,Minuman,19
-Pilus,1000,Snack,19
-pillow,500,Snack,49
-ahmad,1000,Makanan,0
-Nasi kuning,15000,Makanan,11
+NASI GORENG,16000,Makanan,9
+NASI KUNING,10000,Makanan,10
+NASI CAMPUR,20000,Makanan,15
+NASI AYAM,12000,Makanan,10
+BAKSO,10000,Makanan,20
+JUS MANGGA,10000,Minuman,19
+JUS ALPUKAT,15000,Minuman,50
+JUS APEL,20000,Minuman,15
+CHIKI,2000,Snack,49
+LOLIPOP,2000,Snack,100
